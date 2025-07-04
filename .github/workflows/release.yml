@@ -1,0 +1,17 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: carlosperate/arm-none-eabi-gcc-action@v1
+      - run: make -C Core
+      - name: Upload assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            Core/Debug/*.bin
+            Core/Debug/*.hex

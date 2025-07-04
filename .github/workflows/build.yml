@@ -1,0 +1,13 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install arm gcc
+        uses: carlosperate/arm-none-eabi-gcc-action@v1
+      - name: Build
+        run: make -C Core
+      - name: Size report
+        run: arm-none-eabi-size Core/Debug/*.elf
