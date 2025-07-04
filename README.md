@@ -1,6 +1,7 @@
 # MicroLiveAI • STM32F4-Discovery ─ AI-Assisted Live Optimisation  
 *(LoRa node / Gateway reference design)*
 
+![platform](https://img.shields.io/badge/MCU-STM32F407VG-168%20MHz-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![tinyml](https://img.shields.io/badge/TinyML-TFLite--Micro-orange)
 

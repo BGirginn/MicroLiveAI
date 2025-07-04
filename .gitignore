@@ -1,0 +1,10 @@
+/build/
+/Debug/
+/Release/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+.vscode/
+__pycache__/
